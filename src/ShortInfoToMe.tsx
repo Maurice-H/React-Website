@@ -30,12 +30,16 @@ function ShortInfoToMe() {
 
   useEffect(() => {
     function changeIndex() {
-      setGamingAvatarIconsIndex((prev) => (prev + 1) % gamingAvatarIcons.length);
-      setCodingAvatarIconsIndex((prev) => (prev + 1) % codingAvatarIcons.length);
+      setGamingAvatarIconsIndex(
+        (prev) => (prev + 1) % gamingAvatarIcons.length
+      );
+      setCodingAvatarIconsIndex(
+        (prev) => (prev + 1) % codingAvatarIcons.length
+      );
     }
     const intervalId = setInterval(changeIndex, 3000);
     return () => clearInterval(intervalId);
-  }, []);
+  });
 
   const stackTransparentBorder = {
     display: "flex",
