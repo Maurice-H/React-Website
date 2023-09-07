@@ -41,7 +41,7 @@ function NavBar() {
     setAnchorElUser(null);
   };
   return (
-    <AppBar sx={{ backgroundColor: "#ff7232" }} position="sticky">
+    <AppBar sx={{ backgroundColor: "#ff7232" }} position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Avatar
