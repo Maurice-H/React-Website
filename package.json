@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "homepage": "http://{Maurice-H}.github.io/{React-Website}",
+    "homepage": "https://{maurice-h}.github.io/{React-Website}",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "dev": "vite",
