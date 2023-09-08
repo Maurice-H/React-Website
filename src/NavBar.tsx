@@ -48,7 +48,7 @@ function NavBar() {
           <Avatar
             sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
             variant="rounded"
-            src="/maizu pb.png"
+            src="maizu pb.png"
           />
           <Link href="/" underline="none">
             <Typography

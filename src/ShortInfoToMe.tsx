@@ -15,15 +15,15 @@ import { useState } from "react";
 
 function ShortInfoToMe() {
   const gamingAvatarIcons = [
-    "/gamingAvatarIcons/rocket league.ico",
-    "/gamingAvatarIcons/osu.png",
+    "gamingAvatarIcons/rocket league.ico",
+    "gamingAvatarIcons/osu.png",
   ];
 
   const codingAvatarIcons = [
-    "/codingAvatarIcons/React-icon.png",
-    "/codingAvatarIcons/Vue-icon.png",
-    "/codingAvatarIcons/C++-icon.png",
-    "/codingAvatarIcons/Python-icon.png",
+    "codingAvatarIcons/React-icon.png",
+    "codingAvatarIcons/Vue-icon.png",
+    "codingAvatarIcons/C++-icon.png",
+    "codingAvatarIcons/Python-icon.png",
   ];
 
   const [gamingAvatarIconsIndex, setGamingAvatarIconsIndex] = useState(0);
