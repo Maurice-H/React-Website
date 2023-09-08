@@ -22,40 +22,36 @@ function WelcomePage() {
   };
   return (
     <>
-    <Box
-      sx={{
-        position: "relative",
-        display: "flex",
-        flexWrap: "wrap",
-        backgroundImage: "url(backgroundImage.webp)",
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        minWidth: "100vw",
-        minHeight: "100vh",
-        borderBottom: "2px solid rgb(255, 136, 0)",
-        alignContent: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
-      <Stack sx={stackTransparentBorder}>
-        <Typography sx={typographyOrangeShadow}>
-          This is my first Website made with react
-        </Typography>
-      </Stack>
-      <Stack sx={stackTransparentBorder}>
-        <Typography sx={typographyOrangeShadow}>hope you like it</Typography>
-        <img
-          style={{
-            maxHeight: "40px",
-          }}
-          src={nezukoRunning}
-          alt="nezukoRunning"
-        />
-      </Stack>
-    </Box>
+      <Box
+        sx={{
+          position: "relative",
+          display: "flex",
+          backgroundImage: "url(backgroundImage.webp)",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          minWidth: "100vw",
+          minHeight: "100vh",
+          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <Stack sx={stackTransparentBorder}>
+          <Typography sx={typographyOrangeShadow}>
+            This is my first Website made with react and MUI Material UI
+          </Typography>
+        </Stack>
+        <Stack sx={stackTransparentBorder}>
+          <Typography sx={typographyOrangeShadow}>hope you like it</Typography>
+          <img
+            style={{
+              maxHeight: "40px",
+            }}
+            src={nezukoRunning}
+            alt="nezukoRunning"
+          />
+        </Stack>
+      </Box>
     </>
   );
 }

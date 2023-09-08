@@ -10,6 +10,7 @@ import {
   MenuItem,
   Button,
   Tooltip,
+  Link,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
@@ -49,23 +50,22 @@ function NavBar() {
             variant="rounded"
             src="/maizu pb.png"
           />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 40,
-              display: { xs: "none", md: "flex" },
-              fontWeight: 100,
-              letterSpacing: ".1rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            Maurice Website
-          </Typography>
-
+          <Link href="/" underline="none">
+            <Typography
+              variant="h6"
+              noWrap
+              sx={{
+                mr: 40,
+                display: { xs: "none", md: "flex" },
+                fontWeight: 100,
+                letterSpacing: ".1rem",
+                color: "white",
+                textDecoration: "none",
+              }}
+            >
+              Maurice Website
+            </Typography>
+          </Link>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"

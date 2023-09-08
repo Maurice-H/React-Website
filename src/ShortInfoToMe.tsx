@@ -2,6 +2,7 @@ import {
   Avatar,
   Box,
   Grid,
+  Link,
   List,
   ListItem,
   ListItemAvatar,
@@ -82,15 +83,11 @@ function ShortInfoToMe() {
         sx={{
           position: "relative",
           display: "flex",
-          flexWrap: "wrap",
           backgroundImage: "url(ShortInfoBg.jpg)",
-          backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          borderBottom: "2px solid rgb(255, 136, 0)",
           minWidth: "100vw",
           minHeight: "100vh",
-          alignContent: "center",
           justifyContent: "flex-end",
           flexDirection: "row",
           alignItems: "center",
@@ -165,6 +162,26 @@ function ShortInfoToMe() {
                     primary="Coding"
                     secondary="React, Vue, C++, Python, etc."
                   />
+                </ListItem>
+                <ListItem>
+                  <ListItemAvatar>
+                    <Avatar
+                      alt="AniworldAvatarIcons"
+                      src="Aniworld.png"
+                    ></Avatar>
+                  </ListItemAvatar>
+                  <Link
+                    href="https://aniworld.to/user/profil/maizu_u#"
+                    underline="none"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <ListItemText
+                      sx={typographyOrangeShadowSmall}
+                      primary="Animes"
+                      secondary="Click for my last watched animes"
+                    />
+                  </Link>
                 </ListItem>
               </List>
             </Stack>
