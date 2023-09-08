@@ -1,5 +1,4 @@
-import { Box, Button, Link, Stack, Typography } from "@mui/material";
-import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import { Avatar, Box, Button, Link, Stack, Typography } from "@mui/material";
 
 function EndContact() {
   const stackTransparentBorder = {
@@ -39,7 +38,7 @@ function EndContact() {
       >
         <Stack sx={stackTransparentBorder}>
           <Typography sx={typographyOrangeShadow}>
-            If you have improvements or cool ideas
+            If you have any improvements or cool ideas
           </Typography>
           <Typography sx={typographyOrangeShadow}>
             feel free to contact me on
@@ -57,7 +56,13 @@ function EndContact() {
                 "&:hover": { backgroundColor: "rgb(181, 96, 0)" },
               }}
               variant="contained"
-              endIcon={<ContentCopyIcon />}
+              endIcon={
+                <Avatar
+                  alt="Discord-logo"
+                  src="Discord-logo.png"
+                  sx={{ width: 24, height: 24 }}
+                />
+              }
             >
               Discord
             </Button>
