@@ -1,10 +1,29 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
 import "./index.css";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import AboutMe from "./pages/AboutMe";
+import GameHistory from "./pages/GameHistory";
+import UnityGame from "./pages/UnityGame";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path="/" element={<AboutMe />} />
+      <Route path="/GameHistory" element={<GameHistory />} />
+      <Route path="/UnityGame" element={<UnityGame />} />
+    </>
+  ),
+  { basename: "/React-Website/" }
+);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );

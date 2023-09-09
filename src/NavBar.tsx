@@ -10,13 +10,17 @@ import {
   MenuItem,
   Button,
   Tooltip,
-  Link,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import React from "react";
 
-const pages = ["About Me", "Unity Game", "Game History"];
+const pages = [
+  { name: "About Me", path: "/" },
+  { name: "Unity Game", path: "UnityGame" },
+  { name: "Game History", path: "GameHistory" },
+];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function NavBar() {
@@ -50,7 +54,7 @@ function NavBar() {
             variant="rounded"
             src="maizu pb.png"
           />
-          <Link href="/" underline="none">
+          <Link to="/">
             <Typography
               variant="h6"
               noWrap
@@ -96,8 +100,8 @@ function NavBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -121,13 +125,15 @@ function NavBar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
-              </Button>
+              <Link to={page.path}>
+                <Button
+                  key={page.name}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: "white", display: "block" }}
+                >
+                  {page.name}
+                </Button>
+              </Link>
             ))}
           </Box>
 
