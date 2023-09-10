@@ -16,14 +16,18 @@ import MenuIcon from "@mui/icons-material/Menu";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import React from "react";
 
-const pages = [
-  { name: "About Me", path: "/" },
-  { name: "Unity Game", path: "UnityGame" },
-  { name: "Game History", path: "GameHistory" },
-];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+type NavBarProps = {
+  shouldReload: boolean;
+};
 
-function NavBar() {
+function NavBar({ shouldReload }: NavBarProps) {
+  const pages = [
+    { name: "About Me", path: "/" },
+    { name: "Unity Game", path: "/UnityGame" },
+    { name: "Game History", path: "/GameHistory" },
+  ];
+  const settings = ["Profile", "Account", "Dashboard", "Logout"];
+
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -54,7 +58,7 @@ function NavBar() {
             variant="rounded"
             src="maizu pb.png"
           />
-          <Link to="/">
+          <Link to="/" reloadDocument={shouldReload}>
             <Typography
               variant="h6"
               noWrap
@@ -125,7 +129,7 @@ function NavBar() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Link to={page.path}>
+              <Link to={page.path} reloadDocument={shouldReload}>
                 <Button
                   key={page.name}
                   onClick={handleCloseNavMenu}

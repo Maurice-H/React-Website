@@ -15,8 +15,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<AboutMe />} />
-      <Route path="/GameHistory" element={<GameHistory />} />
       <Route path="/UnityGame" element={<UnityGame />} />
+      <Route path="/GameHistory" element={<GameHistory />} />
     </>
   ),
   { basename: "/React-Website/" }

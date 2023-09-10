@@ -6,7 +6,7 @@ import WelcomePage from "../Welcome";
 export default function AboutMe() {
   return (
     <>
-      <NavBar />
+      <NavBar shouldReload={false} />
       <WelcomePage />
       <ShortInfoToMe />
       <EndContact />

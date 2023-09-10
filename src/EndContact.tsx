@@ -44,10 +44,11 @@ function EndContact() {
             feel free to contact me on
           </Typography>
           <Link
-            href="https://discordapp.com/users/465315316709326868"
             underline="none"
             rel="noopener noreferrer"
             target="_blank"
+            onClick={async () => {await navigator.clipboard.writeText("maizu_u") 
+            window.open("https://discordapp.com/users/465315316709326868")}}
           >
             <Button
               sx={{
@@ -64,7 +65,7 @@ function EndContact() {
                 />
               }
             >
-              Discord
+              maizu_u
             </Button>
           </Link>
         </Stack>
