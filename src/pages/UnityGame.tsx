@@ -21,7 +21,7 @@ export default function UnityGame() {
           width: "100vw",
           height: "100vh",
           justifyContent: "center",
-          backgroundImage: "url(../UnityPageBackground.jpg)",
+          backgroundImage: "url(UnityPageBackground.jpg)",
           alignItems: "center",
         }}
       >
@@ -39,7 +39,7 @@ export default function UnityGame() {
               width: "73.4vw",
               height: "100vh",
               backgroundPosition: "top",
-              backgroundImage: "url(../UnityGameBackground.png)",
+              backgroundImage: "url(UnityGameBackground.png)",
               backgroundSize: "100% 100%",
               backgroundRepeat: "no-repeat",
               zIndex: "2",
