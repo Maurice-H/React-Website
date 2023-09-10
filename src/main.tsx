@@ -14,11 +14,11 @@ import UnityGame from "./pages/UnityGame";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/" element={<AboutMe />} />
+      <Route path="" element={<AboutMe />} />
       <Route path="/UnityGame" element={<UnityGame />} />
       <Route path="/GameHistory" element={<GameHistory />} />
     </>
-  ), {basename: "/React-Website/"}
+  ), {basename: "/${process.env.PUBLIC_URL}"}
 ); 
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
