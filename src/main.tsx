@@ -4,7 +4,6 @@ import "./index.css";
 import {
 createBrowserRouter,
   createRoutesFromElements,
-  Navigate,
   Route,
   RouterProvider,
 } from "react-router-dom";
@@ -18,7 +17,6 @@ const router = createBrowserRouter(
       <Route path="/" element={<AboutMe />} />
       <Route path="/UnityGame" element={<UnityGame />} />
       <Route path="/GameHistory" element={<GameHistory />} />
-      <Route path="*" element={<Navigate to="/" />} />
     </>
   ), {basename: "/React-Website/"}
 ); 
